@@ -1,0 +1,25 @@
+name: ROR2Difficulty
+version: 1.0.0
+main: com.ror2difficulty.ROR2DifficultyPlugin
+description: Dynamic difficulty system inspired by Risk of Rain 2
+authors:
+  - keyser
+api-version: 1.21
+
+commands:
+  difficulty:
+    description: Проверить текущую сложность
+    usage: /difficulty
+    aliases: [diff, dif]
+  difficultyadmin:
+    description: Административные команды сложности
+    usage: /difficultyadmin <set|reset|reload> [value]
+    aliases: [difadmin]
+
+permissions:
+  ror2difficulty.admin:
+    description: Доступ к административным командам
+    default: op
+  ror2difficulty.check:
+    description: Проверка сложности
+    default: true

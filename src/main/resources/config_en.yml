@@ -1,0 +1,458 @@
+# === BASIC SETTINGS ===
+difficulty:
+  initial-multiplier: 1.0
+  max-multiplier: 10.0
+  min-multiplier: 0.5
+  hardcore: true
+
+# === LOCALIZATION ===
+lang: EN
+
+# === TIME-BASED SCALING ===
+time-scaling:
+  enabled: true
+  multiplier-per-minute: 0.01
+  max-increase-per-minute: 0.05
+
+# === DEATH PENALTY ===
+death-penalty:
+  enabled: true
+  multiplier-decrease: 0.15
+  minimum-after-death: 0.5
+
+# === KILL BONUS ===
+kill-bonus:
+  enabled: true
+  multiplier-increase:
+    mob: 0.0005
+    boss_1: 0.002
+    boss_2: 0.01
+
+# === IN-GAME EVENTS ===
+events:  enabled: false  major-event-multiplier: 0.5
+
+# === DRAGON BOSS BATTLE (12+ Difficulty) ===
+dragon-boss:
+  enabled: true
+  trigger-difficulty: 12.0
+  health: 500.0
+  phase-two-threshold: 67
+  phase-three-threshold: 33
+  special-attacks:
+    - FIREBALL
+    - LIGHTNING
+    - ENDERMITES
+
+# === DIFFICULTY EFFECTS BY STAGE ===
+effects:
+  mob-health-multiplier: 0.15
+  mob-damage-multiplier: 0.08
+  mob-speed-multiplier: 0.03
+  mob-attack-speed-multiplier: 0.05
+  mob-count-multiplier: 0.05
+  
+  max-damage-multiplier: 2.5
+  player-damage-cap: 20.0
+  
+  stage-thresholds:
+    very_easy:
+      health-add: 0.0
+      damage-add: 0.0
+      speed-add: 0.0
+      
+    easy:
+      health-add: 0.05
+      damage-add: 0.02
+      speed-add: 0.01
+      
+    medium:
+      health-add: 0.12
+      damage-add: 0.06
+      speed-add: 0.03
+      
+    hard:
+      health-add: 0.20
+      damage-add: 0.12
+      speed-add: 0.06
+      
+    very_hard:
+      health-add: 0.35
+      damage-add: 0.18
+      speed-add: 0.8
+      
+    insane:
+      health-add: 0.50
+      damage-add: 0.25
+      speed-add: 0.10
+      
+    impossible:
+      health-add: 0.70
+      damage-add: 0.35
+      speed-add: 0.13
+      
+    haha:
+      health-add: 1.0
+      damage-add: 0.50
+      speed-add: 0.15
+
+# === ENEMIES BY STAGE ===
+mob-stages:
+  very_easy:
+    - ZOMBIE
+    - SKELETON
+    - SPIDER
+    - CAVE_SPIDER
+    - CREEPER
+    - SLIME
+  
+  easy:
+    - HUSK
+    - STRAY
+    - ZOMBIE_VILLAGER
+    - PHANTOM
+  
+  medium:
+    - DROWNED
+    - PILLAGER
+    - ENDERMAN
+    - BOGGED
+  
+  hard:
+    - VINDICATOR
+    - EVOKER
+    - WITCH
+    - BLAZE
+  
+  very_hard:
+    - WITHER_SKELETON
+    - GUARDIAN
+    - BREEZE
+    - RAVAGER
+  
+  insane:
+    - ELDER_GUARDIAN
+    - SHULKER
+    - PHANTOM
+  
+  impossible:
+    - PIGLIN_BRUTE
+    - ZOMBIFIED_PIGLIN
+    - GHAST
+  
+  haha:
+    - ENDER_DRAGON
+    - WITHER
+    - WARDEN
+
+# === SPECIAL EFFECTS BY STAGE ===
+mob-effects:
+  very_easy:
+    enabled: false
+    
+  easy:
+    blazing:
+      chance: 0.05
+      effects: ["fire_aspect_i", "flame_particles"]
+    chilled:
+      chance: 0.05
+      effects: ["slowness_on_hit"]
+    
+  medium:
+    blazing:
+      chance: 0.15
+      effects: ["fire_aspect_i"]
+    overloading:
+      chance: 0.10
+      effects: ["lightning_on_hit", "glowing"]
+    
+  hard:
+    blazing:
+      chance: 0.20
+      effects: ["fire_aspect_ii"]
+    chilled:
+      chance: 0.15
+      effects: ["slowness_on_hit"]
+    overloading:
+      chance: 0.20
+      effects: ["lightning_on_hit"]
+    regenerating:
+      chance: 0.25
+      effects: ["regeneration_potion"]
+    jockey:
+      chance: 0.20
+    
+  very_hard:
+    blazing:
+      chance: 0.30
+      effects: ["fire_aspect_ii"]
+    overloading:
+      chance: 0.30
+      effects: ["lightning_on_hit"]
+    regenerating:
+      chance: 0.30
+      effects: ["regeneration_potion"]
+    malachite:
+      chance: 0.25
+      effects: ["armor_pierce", "thorns_iii"]
+    charged_creeper:
+      chance: 0.10
+    
+  insane:
+    blazing:
+      chance: 0.40
+    overloading:
+      chance: 0.40
+    regenerating:
+      chance: 0.40
+    malachite:
+      chance: 0.40
+    celestial:
+      chance: 0.40
+      effects: ["teleport_every_5s"]
+    
+  impossible:
+    blazing:
+      chance: 0.50
+    overloading:
+      chance: 0.50
+    regenerating:
+      chance: 0.50
+    malachite:
+      chance: 0.50
+    celestial:
+      chance: 0.50
+    void:
+      chance: 0.45
+      effects: ["wither_effect", "darkness"]
+    
+  haha:
+    all_elites: true
+    blazing:
+      chance: 1.0
+    overloading:
+      chance: 1.0
+    regenerating:
+      chance: 1.0
+    malachite:
+      chance: 1.0
+    celestial:
+      chance: 1.0
+    void:
+      chance: 1.0
+    explosive:
+      chance: 0.60
+
+# === ARMOR AND WEAPONS BY STAGE ===
+mob-gear:
+  enabled: true
+  base-chance: 0.05
+  per-multiplier: 0.05
+  
+  stage-gear-chance:
+    very_easy: 0.10      # Leather armor 10%
+    easy: 0.20           # Leather/Iron 20%
+    medium: 0.40         # Iron 40%
+    hard: 0.50           # Diamond 50%
+    very_hard: 0.60      # Diamond/Netherite 60%
+    insane: 0.70         # Netherite 70%
+    impossible: 0.80     # Full Netherite 80%
+    haha: 1.0            # 100% - All Netherite
+  
+  mobs:
+    ZOMBIE:
+      helmet: LEATHER_HELMET
+      chestplate: LEATHER_CHESTPLATE
+      leggings: LEATHER_LEGGINGS
+      boots: LEATHER_BOOTS
+      weapon: WOODEN_SWORD
+      
+    SKELETON:
+      weapon: null
+      
+    SPIDER:
+      weapon: null
+      
+    CAVE_SPIDER:
+      weapon: null
+      
+    CREEPER:
+      weapon: null
+      
+    HUSK:
+      helmet: IRON_HELMET
+      chestplate: IRON_CHESTPLATE
+      leggings: IRON_LEGGINGS
+      boots: IRON_BOOTS
+      weapon: IRON_SWORD
+      
+    STRAY:
+      helmet: IRON_HELMET
+      weapon: null
+      
+    DROWNED:
+      helmet: CHAINMAIL_HELMET
+      chestplate: CHAINMAIL_CHESTPLATE
+      leggings: CHAINMAIL_LEGGINGS
+      boots: CHAINMAIL_BOOTS
+      weapon: TRIDENT
+      
+    VINDICATOR:
+      helmet: DIAMOND_HELMET
+      chestplate: DIAMOND_CHESTPLATE
+      leggings: DIAMOND_LEGGINGS
+      boots: DIAMOND_BOOTS
+      weapon: DIAMOND_AXE
+      
+    EVOKER:
+      helmet: null
+      weapon: null
+      
+    WITCH:
+      helmet: null
+      weapon: null
+      
+    BLAZE:
+      weapon: null
+      
+    WITHER_SKELETON:
+      helmet: DIAMOND_HELMET
+      chestplate: DIAMOND_CHESTPLATE
+      leggings: DIAMOND_LEGGINGS
+      boots: DIAMOND_BOOTS
+      weapon: DIAMOND_SWORD
+      
+    GUARDIAN:
+      weapon: null
+      
+    RAVAGER:
+      helmet: null
+      weapon: null
+      
+    ELDER_GUARDIAN:
+      weapon: null
+      
+    SHULKER:
+      weapon: null
+      
+    PIGLIN_BRUTE:
+      helmet: GOLDEN_HELMET
+      chestplate: GOLDEN_CHESTPLATE
+      leggings: GOLDEN_LEGGINGS
+      boots: GOLDEN_BOOTS
+      weapon: GOLDEN_AXE
+      
+    ZOMBIFIED_PIGLIN:
+      helmet: GOLDEN_HELMET
+      chestplate: GOLDEN_CHESTPLATE
+      leggings: GOLDEN_LEGGINGS
+      boots: GOLDEN_BOOTS
+      weapon: GOLDEN_SWORD
+      
+    GHAST:
+      weapon: null
+
+# === SPECIAL MOBS ===
+special-mobs:
+  bosses_1:
+    - CAVE_SPIDER
+    - IRON_GOLEM
+    - VINDICATOR
+    - EVOKER
+    - WITCH
+  
+  bosses_2:
+    - ENDER_DRAGON
+    - WITHER
+    - GUARDIAN
+    - ELDER_GUARDIAN
+    - RAVAGER
+    - SHULKER
+    - WARDEN
+
+# === LOOT AND RARITY SYSTEM ===
+loot-system:
+  enabled: true
+  
+  # Chance of adding enchantment to items
+  enchantment-chance:
+    base: 0.05
+    per-multiplier: 0.08
+    max: 0.9
+  
+  # At what difficulty the effects start
+  rare-duplicate-stage: 6.0  # Duplicate rare items at 6+
+  bonus-loot-stage: 8.0      # Bonus loot at 8+
+  
+  # Rare materials that are added
+  bonus-materials:
+    - DIAMOND
+    - EMERALD
+    - NETHERITE_SCRAP
+    - GOLD_INGOT
+    - AMETHYST_SHARD
+  
+  # Probability of bonus loot drop
+  bonus-loot-chance:
+    stage_8_9: 0.30
+    stage_10_plus: 0.50
+
+# === NOTIFICATIONS ===
+notifications:
+  send-death-message: true
+  send-kill-message: true
+  update-scoreboard: true
+  update-interval: 5
+
+# === LOGGING ===
+logging:
+  level: INFO
+  log-changes: true
+
+# === DIFFICULTY DISPLAY ===
+display:
+  update-interval-seconds: 2
+
+  actionbar:
+    enabled: true
+    format: "§d⚡ §f{stage} §7│ §e✦ §f{multiplier}x §7│ ⏱ §f{session}"
+
+  bossbar:
+    enabled: true
+    title: "§d⚡ {stage} §7| §f{multiplier}x"
+    color: PURPLE
+    overlay: SEGMENTED_12
+
+  xpbar:
+    enabled: true
+    level-factor: 7
+
+  scoreboard:
+    enabled: true
+    title: "§5§lRisk of Rain"
+    lines:
+      - "§d⚡ §f{stage}"
+      - "§7✦ §f{multiplier}x §8({percentage}%)"
+      - "§7⏱ §f{session}"
+      - "§7👥 §f{online}"
+
+# === GAMEPLAY MODIFIERS ===
+gameplay:
+  hunger:
+    enabled: true
+    exhaustion-multiplier: 1.3
+
+  fall-damage:
+    enabled: true
+    multiplier: 1.25
+
+  mob-gear:
+    enabled: true
+    base-chance: 0.05
+    per-multiplier: 0.05
+    enchant-level-per-multiplier: 1
+
+# === EVENTS CONFIGURATION (DISABLED) ===
+events:
+  enabled: false
+  update-interval-seconds: 5
+  by-difficulty: {}

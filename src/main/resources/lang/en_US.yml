@@ -1,0 +1,28 @@
+stage:
+  very_easy: "Very Easy"
+  easy: "Easy"
+  medium: "Medium"
+  hard: "Hard"
+  very_hard: "Very Hard"
+  insane: "Insane"
+  impossible: "Impossible"
+  i_see_you: "I SEE YOU"
+  im_coming: "I'M COMING FOR YOU"
+  haha: "HAHAHAHA"
+
+ui:
+  stage_label: "Stage"
+  bossbar.title: "Difficulty"
+  event.danger: "Danger is approaching..."
+  event.stronger: "Enemies are becoming stronger!"
+  event.sky_dark: "The sky darkens..."
+  event.extreme: "EXTREME DANGER!!!"
+  event.haha: "HA-HA-HA-HA!!!"
+  actionbar: "⚡ {stage} | ✦ {multiplier}x | ⏱ {session}"
+  bossbar: "⚡ {stage} | {multiplier}x"
+  scoreboard.title: "§5§lRisk of Rain"
+  scoreboard.lines:
+    - "§d⚡ §f{stage}"
+    - "§7✦ §f{multiplier}x §8({percentage}%)"
+    - "§7⏱ §f{session}"
+    - "§7👥 §f{online}"
